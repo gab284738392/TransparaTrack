@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Aleo:wght@700&family=Kodchasan:wght@400;500;600;700&display=swap');
+
+/* --- Help Page (h_home.php) Content Styles --- */
+
+/* Set main content padding and background */
+main {
+    /* Required padding to match header/footer */
+    padding: 30px 150px;
+    background-color: #EBE9E9; /* Light background for the main content area */
+}
+
+/* Base font size for all main content text */
+.help-content-container, 
+.help-content-container * {
+    font-size: 15px;
+    /* Applied Kodchasan font to all main content */
+    font-family: 'Kodchasan', sans-serif; 
+    line-height: 1.6;
+}
+
+/* --- New Navigation Bar Styles (Above Guide Section) --- */
+.guide-nav-bar {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: flex-start; 
+}
+
+.guide-nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px; 
+}
+
+.guide-nav-bar ul li a {
+    font-family: 'Aleo', serif; 
+    font-size: 15px;
+    font-weight: 700;
+    color: #485c9f; 
+    text-decoration: none;
+    padding-bottom: 5px; 
+    transition: color 0.2s, border-bottom 0.2s; /* Add transition for smoothness */
+    /* Key Change: Start with a transparent/invisible border */
+    border-bottom: 2px solid transparent; 
+}
+
+.guide-nav-bar ul li a:hover {
+    color: #31447d;
+    /* Key Change: Make the border visible on hover */
+    border-bottom: 2px solid #485c9f;
+}
+
+/* Style for the active link (Login & Sign up) - This keeps the underline on the current page */
+.guide-nav-bar ul li a.active {
+    border-bottom: 2px solid #485c9f;
+}
+
+
+/* --- Guide Section Styling --- */
+.section-help-guide {
+    margin-bottom: 40px;
+}
+
+.guide-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #AD2020;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.guide-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+
+/* --- Image Placeholder Styling --- */
+.guide-image-placeholder .guide-image {
+    max-width: 100%; /* Ensure image doesn't overflow the container */
+    height: auto;
+    display: block; /* Removes any extra space below the image */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- Guide Table Styling (Matching Figma) --- */
+.guide-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    margin-bottom: 60px;  /* <-- space after the table */
+    border-radius: 8px; /* Rounded corners for the whole table */
+    overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.guide-table th {
+    padding: 15px;
+    text-align: center;
+    border: none;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 18px;
+ /* Remove default table borders */
+}
+
+.guide-table td {
+    padding: 15px;
+    text-align: left;
+    border: none;
+    font-family: 'Inter', sans-serif;
+ /* Remove default table borders */
+}
+
+/* Header Styling - Gradient/Color Bar */
+.guide-table thead tr {
+    /* Use the blue from the prototype table header */
+    background-color:#AD2020; 
+    color: #fff;
+    font-weight: 700;
+}
+
+.guide-table tbody tr {
+    background-color: #fff; /* White background for rows */
+}
+
+/* Bottom Border for all table cells (mimicking the single-line structure) */
+.guide-table th, .guide-table td {
+    border-bottom: 1px solid #ddd; 
+}
+
+/* Remove bottom border on the last row */
+.guide-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Column Widths (Adjust as needed based on content) */
+.guide-table .col-number {
+    width: 8%; /* Narrow for the number */
+    text-align: center;
+}
+
+.guide-table .col-title {
+    width: 20%;
+    font-weight: 700; /* Bolder title text */
+    
+}
+
+/* --- New Styles for Table Body Content --- */
+
+/* Center the content of the Number column in the table body */
+.guide-table tbody td:nth-child(1) { /* Targets the first <td> in each row (Number column) */
+    text-align: center;
+    /* Make content bold */
+    font-weight: 700; 
+}
+
+/* Make the content of the Title column in the table body bold */
+.guide-table tbody td:nth-child(2) { /* Targets the second <td> in each row (Title column) */
+    /* Make content bold */
+    font-weight: 700; 
+}
+
+.guide-table .col-description {
+    width: 37%;
+}
+
+.guide-table .col-action {
+    width: 35%;
+}

@@ -1,0 +1,718 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@700&family=Kodchasan:wght@500;700&family=Outfit:wght@700&display=swap');
+
+/* ==========================================================================
+   1. GLOBAL VARIABLES & RESET
+   ========================================================================== */
+:root {
+  --brand-yellow: #F3B900;
+  --accent-yellow: #F5B846;
+  --brand-deep: #4149B7;
+  --brand-red: #AD2020;
+  --deep-blue: #27294A;
+  --muted-gray: #373131;
+  --muted-dark: #1E1E1E;
+  --white: #ffffff;
+  --bg: #EBE9E9;
+  --panel-bg: #FFF6F2;
+  --container-max: 1200px;
+  --gutter: 16px;
+  --brand-gradient: linear-gradient(90deg, #4149B7 0%, #CE2323 50%, #F3B900 100%);
+  --search-placeholder: #6EA8FF;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EBE9E9;
+}
+
+/* ==========================================================================
+   2. HERO SECTION
+   ========================================================================== */
+.hero-section {
+  width: 100%;
+  height: 600px; 
+  background: radial-gradient(111.09% 148.36% at 100% 100%, #F3B900 0%, #AD2020 51.77%, #030B76 100%);
+  background-blend-mode: hard-light; 
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 150px;
+}
+
+.hero-content-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hero-text-content {
+  max-width: 700px;
+  color: #FFFFFF;
+}
+
+.hero-greeting {
+  font-family: 'Aleo', serif; 
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 25px;
+  margin-top: 0;
+  display: block; 
+  text-align: left; 
+  position: relative; 
+  padding: 0; 
+}
+
+.hero-greeting::before,
+.hero-greeting::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 200px; 
+  height: 2px;
+  background-color: #FFFFFF;
+}
+.hero-greeting::before { top: -15px; }
+.hero-greeting::after { bottom: -15px; }
+
+.hero-main-title {
+  font-family: 'Aleo', serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.1;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.local-barangay {
+  background: linear-gradient(90deg, #FFF 0%, #F5B846 78.85%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 550px;
+  margin-top: 0;
+}
+
+.hero-callout-box {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 100px;
+}
+
+.callout-text {
+  color: #27294A;
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-top: 0;
+}
+
+.callout-link {
+  color: #4149B7;
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.callout-link:hover {
+  color: #CE2323;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   3. DASHBOARD GENERAL LAYOUT
+   ========================================================================== */
+.dashboard-section {
+  background-color: #EBE9E9; 
+  padding: 90px 150px; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.dashboard-title-area h2 {
+  font-family: 'Aleo', serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #27294A;
+  display: block; 
+  text-align: left;
+  position: relative; 
+  padding: 0;
+  margin-top: 25px; 
+  margin-bottom: 60px;
+}
+
+.dashboard-title-area h2::before,
+.dashboard-title-area h2::after {
+  content: '';
+  position: absolute;
+  left: 0; 
+  width: 200px; 
+  height: 3px; 
+  background: linear-gradient(90deg, #F3B900 0%, #CE2323 50%, #4149B7 100%);
+}
+.dashboard-title-area h2::before { top: -15px; }
+.dashboard-title-area h2::after { bottom: -15px; }
+
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* --- 3a. Stat Cards (Top Row) --- */
+.stat-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.stat-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 25px 35px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.stat-label {
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #27294A;
+  margin: 0 0 10px 0;
+}
+
+.stat-value {
+  font-family: 'Outfit', sans-serif; 
+  font-weight: 700;
+  font-size: 40px;
+  margin: 0;
+  color: #4149B7; 
+}
+
+.total-cost .stat-value {
+  color: #CE2323; 
+}
+
+/* --- 3b. Chart Cards General --- */
+.chart-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 30px;
+}
+
+.chart-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  height: 450px; /* Standard height */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-title {
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 20px;
+  color: #27294A;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   4. CARD 3: PROJECTS OCTOBER (Bar Chart)
+   ========================================================================== */
+.projects-october {
+  height: 450px;
+}
+
+.bar-chart-container {
+  display: flex;
+  flex-grow: 1; 
+  position: relative;
+  padding-bottom: 5px; 
+  padding-left: 0; 
+}
+
+.y-axis-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 14px;
+  color: #888;
+  padding-right: 10px;
+  height: 100%;
+  margin-top: 0; 
+  flex-shrink: 0;
+}
+.y-axis-labels span:first-child { transform: translateY(-5px); }
+.y-axis-labels span:last-child { transform: translateY(5px); }
+
+.bar-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-grow: 1;
+  position: relative;
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px dashed #ddd;
+  border-top: 1px dashed #ddd; 
+}
+
+.bar-area::before {
+  content: ''; position: absolute; width: 100%; border-top: 1px dashed #ddd; left: 0; top: 25%; z-index: 0; pointer-events: none; 
+}
+.bar-area::after {
+  content: ''; position: absolute; width: 100%; border-top: 1px dashed #ddd; left: 0; top: 50%; z-index: 0; pointer-events: none; 
+}
+.bar-group:first-child::before {
+  content: ''; position: absolute; width: 400%; border-top: 1px dashed #ddd; left: 0; top: 75%; z-index: 0; pointer-events: none;
+}
+
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%; 
+  position: relative;
+  height: 100%;
+  border-right: 1px dashed #ddd; 
+}
+
+.chart-bar {
+  width: 60%; 
+  background-color: #4149B7; 
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: absolute;
+  bottom: 0;
+  transition: height 0.3s ease; 
+  z-index: 1; 
+}
+
+.x-label {
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 14px;
+  color: #27294A;
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+  text-align: center;
+}
+
+/* ==========================================================================
+   CARD 4: STATUS BREAKDOWN (Fixed)
+   ========================================================================== */
+.status-breakdown {
+  height: 450px;
+}
+
+
+.horizontal-bar-chart-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative; 
+}
+
+/* White Overlay (Left Side) - Covers grid lines behind labels */
+.horizontal-bar-chart-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  background-color: #FFFFFF; 
+  z-index: 2; /* Sits above grid lines */
+}
+
+.h-chart-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-right: 0px; 
+  position: relative;
+  background-color: #FFFFFF; 
+}
+
+/* Grid Lines */
+.h-chart-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100px; 
+  width: calc(100% - 100px);
+  height: 100%;
+  background-image: linear-gradient(to right,
+            #ddd 0, #ddd 1px, transparent 1px, 
+            transparent 25%, #ddd 25%, #ddd calc(25% + 1px), transparent calc(25% + 1px),
+            transparent 50%, #ddd 50%, #ddd calc(50% + 1px), transparent calc(50% + 1px),
+            transparent 75%, #ddd 75%, #ddd calc(75% + 1px), transparent calc(75% + 1px),
+            transparent calc(100% - 1px), #ddd calc(100% - 1px), #ddd 100% 
+    );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  mask-image: repeating-linear-gradient(to bottom, #000, #000 5px, transparent 5px, transparent 10px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.status-bar-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px dashed #ddd; 
+ 
+  padding-bottom: 11px; 
+}
+
+
+
+
+.status-bar-group:last-of-type { border-bottom: none; }
+.status-bar-group:first-of-type { padding-top: 0; }
+
+.status-label {
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #27294A;
+  min-width: 90px; 
+  text-align: right;
+  margin-right: 10px;
+  z-index: 3; /* Above overlay */
+}
+
+/* FIX: Increased z-index to 5 to ensure bars are visible */
+.bar-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 5; 
+}
+
+.status-bar {
+  height: 100%;
+  border-radius: 0 5px 5px 0;
+  transition: width 0.8s ease-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Explicit Bar Colors */
+.complete-bar   { background-color: #5cb85c !important; } 
+.ongoing-bar    { background-color: #4249a5 !important; } 
+.delayed-bar    { background-color: #ffc107 !important; } 
+.cancelled-bar  { background-color: #dc3545 !important; } 
+.onhold-bar     { background-color: #7E57C2 !important; } 
+.notstarted-bar { background-color: #9E9E9E !important; } 
+
+.x-axis-labels {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 100px);
+  position: absolute;
+  bottom: -20px;
+  left: 100px;
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 12px;
+  color: #888;
+  z-index: 3; 
+  background-color: #ffffff;
+  padding-top: 10px;
+}
+
+.status-legend {
+  margin-top: 90px;
+  justify-content: flex-start;
+  flex-wrap: wrap; 
+  gap: 10px 20px;
+}
+
+   .status-legend {
+            /* 1. Enable horizontal scrolling */
+            overflow-x: auto;
+            /* 2. Use flexbox to line items up */
+            display: flex;
+            /* 3. CRUCIAL: Prevent flex items from wrapping to the next line */
+            flex-wrap: nowrap;
+            width: 430px;
+            
+        }
+
+        /* * --- LEGEND ITEM STYLING MOVED HERE FROM INLINE TAILWIND ---
+         * Defines the layout (flex, space-x-2) and spacing (margin-right) 
+         */
+        .legend-item {
+            flex-shrink: 0; 
+            margin-right: 1.5rem; /* Separates the legend items */
+            
+            /* Equivalent to Tailwind: flex items-center space-x-2 */
+            display: flex;
+            align-items: center;
+            gap: 0.5rem; 
+        }
+
+        /* * --- LEGEND COLOR STYLING MOVED HERE FROM INLINE TAILWIND ---
+         * Defines the size (w-4 h-4), shape (rounded-full), and subtle shadow (shadow-sm)
+         */
+        .legend-color {
+            width: 1rem;       /* Equivalent to w-4 */
+            height: 1rem;      /* Equivalent to h-4 */
+            border-radius: 50%; /* Equivalent to rounded-full */
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Equivalent to shadow-sm */
+        }
+        
+        /* Optional: Style the scrollbar for a cleaner look (Webkit browsers) */
+        .status-legend::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .status-legend::-webkit-scrollbar-thumb {
+            background-color: #d1d5db; /* Light gray */
+            border-radius: 10px;
+        }
+
+        .status-legend::-webkit-scrollbar-track {
+            background: #f3f4f6; /* Very light gray */
+        }
+
+/* ==========================================================================
+   6. PIE CHART CARDS (DEPARTMENT & CATEGORY)
+   ** FIXED: Centered Alignment + Scrollable Department List **
+   ========================================================================== */
+
+/* 6a. Shared Container Styles for Both Cards */
+.projects-department,
+.projects-category {
+  display: flex;
+  flex-direction: column; 
+  height: 450px !important; /* Fixed height for layout match */
+  justify-content: flex-start;
+}
+
+/* 6b. The Flex Container holding Chart + Legend */
+.pie-chart-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Horizontal Center */
+  align-items: center;     /* Vertical Center */
+  gap: 60px;               /* Gap between Chart and Legend */
+  padding-bottom: 20px;    /* Visual balance */
+}
+
+/* 6c. Pie Chart Circles */
+.department-pie-chart, 
+.pie-chart {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  mask: radial-gradient(transparent 60px, white 60px); 
+  -webkit-mask: radial-gradient(transparent 60px, white 60px); 
+}
+
+/* Conic Gradients */
+.department-pie-chart {
+  background: conic-gradient(
+      #5A2066 0% 9%, #4149B7 9% 20%, #00BCD4 20% 27%, #5CB85C 27% 34%, 
+      #FFC107 34% 41%, #FF7C00 41% 47%, #DC3545 47% 53%, #E83E8C 53% 59%,
+      #9C27B0 59% 65%, #03A9F4 65% 70%, #4CAF50 70% 75%, #FFEB3B 75% 80%,
+      #FF9800 80% 85%, #795548 85% 90%, #607D8B 90% 100%
+  );
+}
+
+.pie-chart {
+  background: conic-gradient(
+      #DC3545 0% 20%, #FF7C00 20% 35%, #FFC107 35% 45%, #5CB85C 45% 60%, 
+      #00BCD4 60% 70%, #4149B7 70% 82%, #6C4B9A 82% 90%, #E83E8C 90% 100%
+  );
+}
+
+/* 6d. Legend Item Common Styles */
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.legend-label {
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 13px;
+  color: #27294A;
+  line-height: 1.2;
+}
+
+/* 6e. Department Legend Specifics (Scrollable) */
+.department-legend {
+  display: flex;
+  flex-direction: column;
+  width: 320px;         /* Fixed width for alignment */
+  max-height: 240px;    /* Constrained height */
+  overflow-y: auto;     /* Enable scroll */
+  padding-right: 10px;
+}
+
+/* Custom Scrollbar */
+.department-legend::-webkit-scrollbar { width: 4px; }
+.department-legend::-webkit-scrollbar-track { background: transparent; }
+.department-legend::-webkit-scrollbar-thumb { background: #d1d1d1; border-radius: 4px; }
+.department-legend::-webkit-scrollbar-thumb:hover { background: #a0a0a0; }
+
+/* 6f. Category Legend Specifics (Centered) */
+.category-legend {
+  display: flex;
+  flex-direction: column;
+  width: 320px; /* Match Department width */
+  justify-content: center;
+}
+
+/* ==========================================================================
+   7. LEGEND COLORS (SHARED)
+   ========================================================================== */
+.chart-legend {
+  margin-top: 40px;
+  display: flex;
+  
+}
+
+.legend-color.project-color { background-color: #4149B7; }
+.legend-color.complete-color { background-color: #5cb85c; }
+.legend-color.ongoing-color  { background-color: #4249a5; }
+.legend-color.delayed-color  { background-color: #ffc107; }
+.legend-color.cancelled-color { background-color: #dc3545; }
+.legend-color.onhold-color { background-color: #7E57C2; }
+.legend-color.notstarted-color { background-color: #9E9E9E; }
+
+.legend-color.cat-infra-color    { background-color: #DC3545; } 
+.legend-color.cat-health-color   { background-color: #FF7C00; } 
+.legend-color.cat-peace-color    { background-color: #FFC107; } 
+.legend-color.cat-drrm-color     { background-color: #5CB85C; } 
+.legend-color.cat-env-color      { background-color: #00BCD4; } 
+.legend-color.cat-livelihood-color { background-color: #4149B7; } 
+.legend-color.cat-sk-color       { background-color: #6C4B9A; } 
+.legend-color.cat-gov-color      { background-color: #E83E8C; } 
+
+/* Department Colors */
+.legend-color.dept-pb-color      { background-color: #5A2066; } 
+.legend-color.dept-sb-color      { background-color: #4149B7; }
+.legend-color.dept-bdc-color     { background-color: #00BCD4; }
+.legend-color.dept-bpoc-color    { background-color: #5CB85C; }
+.legend-color.dept-bdrrmc-color  { background-color: #FFC107; }
+.legend-color.dept-badac-color   { background-color: #FF7C00; }
+.legend-color.dept-bcpc-color    { background-color: #DC3545; }
+.legend-color.dept-beswmc-color  { background-color: #E83E8C; }
+.legend-color.dept-lt-color      { background-color: #9C27B0; }
+.legend-color.dept-bhw-color     { background-color: #03A9F4; }
+.legend-color.dept-bpso-color    { background-color: #4CAF50; }
+.legend-color.dept-chs-color     { background-color: #FFEB3B; }
+.legend-color.dept-clc-color     { background-color: #FF9800; }
+.legend-color.dept-ci-color      { background-color: #795548; }
+.legend-color.dept-cro-color     { background-color: #607D8B; }
+
+/* ==========================================================================
+   8. FOOTER
+   ========================================================================== */
+.site-footer {
+  width: 100%;
+}
+
+.footer-gradient-line {
+  height: 50px;
+  background: linear-gradient(90deg, #F3B900 0%, #CE2323 50%, #4149B7 100%);
+}
+
+.footer-content-area {
+  height: 350px;
+  background: #EBE9E9;
+  padding: 50px 150px;
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box; 
+}
+
+.footer-column {
+  margin-right: 100px;
+}
+
+.footer-column ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 30px;
+}
+
+.footer-column a {
+  color: #27294A;
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.link-logout {
+  color: #CE2323;
+  font-weight: 700;
+}
+
+.footer-logo {
+  margin-left: auto; 
+  align-self: flex-end;
+  background: linear-gradient(270deg, #4149B7 0%, #CE2323 57.69%, #F3B900 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+}

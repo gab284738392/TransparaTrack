@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@700&family=Kodchasan:wght@500;700&display=swap');
+
+/* ========================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   ======================================== */
+:root {
+  --brand-yellow: #F3B900;
+  --accent-yellow: #F5B846;
+  --brand-deep: #4149B7;
+  --brand-red: #AD2020;
+  --deep-blue: #27294A;
+  --muted-gray: #373131;
+  --muted-dark: #1E1E1E;
+  --white: #ffffff;
+  --bg: #EBE9E9;
+  --panel-bg: #FFF6F2;
+  --container-max: 1200px;
+  --gutter: 16px;
+  --brand-gradient: linear-gradient(90deg, #4149B7 0%, #CE2323 50%, #F3B900 100%);
+  --search-placeholder: #6EA8FF;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #EBE9E9;
+}
+
+/* ========================================
+   HEADER STYLES
+   ======================================== */
+.header-bar {
+  width: auto;
+  height: auto;
+  background: var(--bg);
+  padding: 20px 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.header-top {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.icon-container {
+  width: 60px;
+  height: 60px;
+}
+
+.icon-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.title-wrapper {
+  margin-left: 20px;
+}
+
+.header-title {
+  background: linear-gradient(270deg, var(--brand-yellow) 0%, #CE2323 42.31%, var(--brand-deep) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  width: 342.178px;
+  display: block;
+}
+
+.header-subtitle {
+  color: var(--deep-blue);
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  width: 501.842px;
+  display: block;
+  margin-top: 0;
+}
+
+.admin-icon-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.admin-icon-container .btn-login,
+.header-top .btn-login {
+  background: var(--brand-deep);
+  color: var(--white) !important;
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  transition: background 160ms ease, transform 120ms ease, box-shadow 160ms ease;
+  box-shadow: 0 2px 6px rgba(65, 73, 183, 0.08);
+}
+
+.admin-icon-container .btn-login:hover,
+.header-top .btn-login:hover,
+.admin-icon-container .btn-login:focus,
+.header-top .btn-login:focus {
+  background: #2f3b9f;
+  transform: translateY(-1px);
+  outline: none;
+  box-shadow: 0 4px 12px rgba(65, 73, 183, 0.12);
+}
+
+ :root { --admin-avatar-size: 45px; }
+    .admin-avatar {
+        width: var(--admin-avatar-size);
+        height: var(--admin-avatar-size);
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .admin-avatar img,
+    .admin-avatar svg {
+        width: 100%;
+        height: 100%;
+        border-radius: 25%;
+    }
+
+    
+.gradient-line {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(270deg, var(--brand-yellow) 0%, #CE2323 42.31%, var(--brand-deep) 100%);
+  margin: 20px 0;
+}
+
+/* Navigation */
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-container ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container li {
+  margin: 0 20px;
+}
+
+.nav-container a {
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--deep-blue);
+  text-decoration: none;
+  display: flex;
+  width: 170px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-container a:hover {
+  background: var(--brand-deep);
+  color: var(--white);
+}
+
+/* --- NEW SUBHEADER --- */
+
+.subheader-bar {
+    height: 100px;
+   
+    background-image: linear-gradient(271deg, #F3B900 4.48%, #CE2323 40.11%, #4149B7 90.69%);
+    background-blend-mode: hard-light;
+    padding-left: 150px;
+    padding-right: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.subheader-title {
+    font-family: 'Aleo', serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 71.049px;
+    background: linear-gradient(90deg, #F5B846 21.15%, #FFF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- MAIN CONTENT --- */
+
+.main-content {
+    padding: 50px 150px;
+    min-height: 500px; 
+}
+
+/* --- THIS RULE WAS MODIFIED --- */
+.user-details-card {
+    background: #FFF;
+    border-radius: 20px;
+    width: 100%; 
+    height: auto; 
+    padding: 50px; 
+    margin-bottom: 30px; 
+    
+    display: flex;
+    /* This makes the card stack its children vertically */
+    flex-direction: column; 
+    /* This makes its children fill the width */
+    align-items: stretch; 
+    
+    box-sizing: border-box; 
+}
+
+/* --- THIS RULE IS NEW --- */
+/* This wrapper holds the top row (pic, text, button) */
+.card-top-row {
+    display: flex;
+    align-items: flex-start; /* Aligns all 3 items to the top */
+    width: 100%;
+}
+
+.profile-pic-container {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.profile-pic-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-info-wrapper {
+    margin-left: 40px;
+    /* This tells the text block to grow */
+    flex-grow: 1; 
+}
+
+.user-name {
+    color: #0E0D38;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: block; 
+}
+
+.user-role {
+    color: #AD2020;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: block;
+    margin-top: 5px;
+}
+
+.user-contact-details {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center; 
+    margin-right: 30px; 
+}
+
+.detail-row img {
+    width: 24px; 
+    height: 24px;
+    margin-right: 10px;
+}
+
+.detail-row span {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 20px; 
+    font-weight: 500;
+    color: #333;  
+}
+
+/* --- THIS RULE WAS MODIFIED --- */
+.info-gradient-line {
+    /* Use 100% to fill its parent (the card) */
+    width: 100%; 
+    height: 3px;
+    background: linear-gradient(270deg, #4149B7 0%, #CE2323 57.69%, #F3B900 100%);
+    margin-top: 30px; 
+}
+
+/* --- THIS RULE WAS MODIFIED --- */
+/* --- THIS RULE WAS MODIFIED --- */
+.edit-profile-button {
+    /* REMOVED: margin-left: auto; */ 
+    /* REMOVED: align-self: flex-start; */
+
+    display: flex;
+    width: 100px;
+    height: 40px;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #4149B7;
+
+    font-family: 'Kodchasan', sans-serif;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Good to add this */
+}
+
+.edit-profile-button:hover {
+    background-color: #363f9a; /* Darker blue for hover */
+}
+
+/* --- THIS RULE IS NEW --- */
+/* This container holds the Logout and Edit buttons */
+.profile-button-container {
+    display: flex;
+    flex-direction: column; /* Stacks buttons vertically */
+    gap: 10px; /* Space between the buttons */
+    margin-left: auto; /* Pushes the container to the right */
+    align-self: flex-start; /* Aligns container to the top */
+    flex-shrink: 0;
+}
+
+/* --- THIS RULE IS NEW --- */
+/* The new logout button */
+.logout-profile-button {
+    display: flex;
+    width: 100px; /* Same width as edit button */
+    height: 40px;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    
+    /* --- Style difference --- */
+    background: #CE2323; /* Red color */
+
+    font-family: 'Kodchasan', sans-serif;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; 
+}
+
+.logout-profile-button:hover {
+    background-color: #AD2020; /* Darker red for hover */
+}
+
+/* --- EDIT A PROJECT CARD --- */
+.edit-project-card {
+    background: #FFF;
+    border-radius: 20px;
+    width: 100%; 
+    height: auto; 
+    padding: 40px; 
+    margin-bottom: 30px; 
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-sizing: border-box; 
+}
+
+/* --- PROJECT ROW STYLES --- */
+.project-row {
+    display: flex;
+    align-items: flex-start; /* Aligns items to the top of the row */
+    
+    /* Adds a light gray line between projects */
+    border-bottom: 2px solid #EBE9E9; 
+    padding-bottom: 50px; /* Space below the row */
+    margin-bottom: 50px; /* Space before the next row's border */
+}
+
+/* This makes sure the last project row doesn't have a line */
+.project-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.project-image-placeholder {
+    /* Using similar size to your profile pic */
+    width: 230px; 
+    height: 230px;
+    background: #E0E0E0; /* Light gray placeholder */
+    border-radius: 8px;
+    flex-shrink: 0; /* Prevents it from shrinking */
+    align-self: center;
+}
+
+.project-info {
+    margin-left: 40px;
+    flex-grow: 1; /* Takes up the available space */
+}
+
+.project-title {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #CE2323; /* Red color from image */
+    display: block;
+}
+
+.project-divider-line {
+    width: 100%;
+    height: 2px;
+    background: #f3b900ff; /* Gold color from image */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.project-details-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.project-details-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 16px;
+    color: #333; /* Dark gray text */
+}
+
+.project-details-list li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.view-project-button {
+    margin-left: auto; /* Pushes button to the right */
+    align-self: flex-end; /* Pushes button to the bottom */
+    
+    background: #AD2020; /* Dark red from image */
+    color: #FFFFFF;
+    
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none; /* remove default button border */
+    outline: none; /* remove focus outline */
+    
+    font-family: 'Kodchasan', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}
+
+.view-project-button:hover {
+    background-color: #CE2323;
+}
+
+
+/* --- ADD NEW PROJECT CARD --- */
+.add-project-card {
+    /* Re-using the same card styles */
+    background: #FFF;
+    border-radius: 20px;
+    width: 100%; 
+    height: auto; 
+    padding: 40px; 
+    margin-bottom: 30px; 
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-sizing: border-box; 
+}
+
+/* The "Click here to Create" button */
+.create-project-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    border-radius: 8px;
+    
+    /* This creates the dashed border */
+    border: 2px dashed #4149B7; 
+    
+    background-color: #F4F6FF; /* A very light blue */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.create-project-button:hover {
+    background-color: #E6E9FF; /* A slightly darker blue on hover */
+}
+
+.create-project-button span {
+    color: #4149B7;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 10px; /* Space for an icon */
+}
+
+/* --- Reusable Card Title --- */
+.card-title {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #0E0D38;
+    display: block;
+    margin-bottom: 50px;
+}
+
+
+/* --- FOOTER --- */
+
+.site-footer {
+    width: 100%;
+}
+
+.footer-gradient-line {
+    height: 50px;
+    background: linear-gradient(90deg, #F3B900 0%, #CE2323 50%, #4149B7 100%);
+}
+
+.footer-content-area {
+    height: 350px;
+    background: #EBE9E9;
+    padding: 50px 150px;
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box; 
+}
+
+.footer-column {
+    margin-right: 100px;
+}
+
+.footer-column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 30px;
+}
+
+.footer-column a {
+    color: #27294A;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.link-logout {
+    color: #CE2323;
+    font-weight: 700;
+}
+
+.footer-logo {
+    margin-left: auto; 
+    align-self: flex-end;
+    background: linear-gradient(270deg, #4149B7 0%, #CE2323 57.69%, #F3B900 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+}

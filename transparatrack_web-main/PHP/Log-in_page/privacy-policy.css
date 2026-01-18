@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@700&family=Kodchasan:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --brand-yellow: #F3B900;
+    --accent-yellow: #F5B846;
+    --brand-deep: #4149B7;
+    --brand-red: #AD2020;
+    --deep-blue: #27294A;
+    --muted-gray: #373131;
+    --white: #EBE9E9;
+    --bg: #EBE9E9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+
+
+/*Header*/
+
+.header-bar {
+  width: auto; 
+  height: auto; 
+  background: #EBE9E9; 
+  padding: 20px 150px; 
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.header-top {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.icon-container {
+  width: 60px;
+  height: 60px;
+}
+
+.icon-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.title-wrapper {
+  margin-left: 20px; 
+}
+
+.header-title {
+  background: linear-gradient(270deg, #F3B900 0%, #CE2323 42.31%, #4149B7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 342.178px;
+  display: block;
+}
+
+.header-subtitle {
+  color: #27294A;
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 501.842px;
+  display: block;
+  margin-top: 0px;
+}
+
+
+.admin-icon-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.admin-icon-container .btn-login,
+.header-top .btn-login {
+  background: var(--brand-deep);
+  color: var(--white) !important;
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  transition: background 160ms ease, transform 120ms ease, box-shadow 160ms ease;
+  box-shadow: 0 2px 6px rgba(65, 73, 183, 0.08);
+}
+
+.admin-icon-container .btn-login:hover,
+.header-top .btn-login:hover,
+.admin-icon-container .btn-login:focus,
+.header-top .btn-login:focus {
+  background: #2f3b9f;
+  transform: translateY(-1px);
+  outline: none;
+  box-shadow: 0 4px 12px rgba(65, 73, 183, 0.12);
+}
+
+
+.gradient-line {
+  width: 100%; 
+  height: 3px;
+  background: linear-gradient(270deg, #F3B900 0%, #CE2323 42.31%, #4149B7 100%);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-container ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container li {
+  margin: 0 20px;
+}
+
+.nav-container a {
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #27294A;
+  text-decoration: none;
+  display: flex;
+  width: 170px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-container a:hover {
+  background: #4149B7;
+  color: #FFFFFF;
+}
+
+/* Main Content */
+.privacy-content {
+    max-width: 100%;
+    margin: 40px 0;
+    background: transparent;
+    padding: 0 150px;
+    box-shadow: none;
+}
+
+.privacy-content h1 {
+    color: #E94B3C;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid var(--brand-yellow);
+    font-weight: 600;
+    font-family: 'Kodschan', 'Kodchasan', sans-serif;
+}
+
+.privacy-content section {
+    margin-bottom: 30px;
+}
+
+/* Section separators */
+.privacy-content section + section {
+    border-top: 1.5px solid #e0e0e0;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.privacy-content h2 {
+    color: #474FA0;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    font-weight: 600;
+    font-family: 'Kodschan', 'Kodchasan', sans-serif;
+}
+
+.privacy-content h3 {
+    color: #1E1E1E;
+    font-size: 1.1rem;
+    margin: 15px 0 10px 0;
+    font-weight: 600;
+    font-family: 'Kodschan', 'Kodchasan', sans-serif;
+}
+
+.privacy-content p {
+    color: #1E1E1E;
+    margin-bottom: 15px;
+    text-align: justify;
+    text-align-last: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.privacy-content ul,
+.privacy-content ol {
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.privacy-content li {
+    color: #1E1E1E;
+    margin-bottom: 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+.privacy-content strong {
+    color: #1E1E1E;
+    font-weight: 600;
+}
+
+.contact-box {
+    margin-top: 30px;
+}
+
+.contact-box h2 {
+    margin-top: 0;
+}
+
+/* --- FOOTER --- */
+
+.site-footer {
+    width: 100%;
+}
+
+.footer-gradient-line {
+    height: 50px;
+    background: linear-gradient(90deg, #F3B900 0%, #CE2323 50%, #4149B7 100%);
+}
+
+.footer-content-area {
+    height: 350px;
+    background: #EBE9E9;
+    padding: 50px 150px;
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box; 
+}
+
+.footer-column {
+    margin-right: 100px;
+}
+
+.footer-column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 30px;
+}
+
+.footer-column a {
+    color: #27294A;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.link-logout {
+    color: #CE2323;
+    font-weight: 700;
+}
+
+.footer-logo {
+    margin-left: auto; 
+    align-self: flex-end;
+    background: linear-gradient(270deg, #4149B7 0%, #CE2323 57.69%, #F3B900 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+}
